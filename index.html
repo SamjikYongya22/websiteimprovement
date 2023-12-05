@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Bakery Shop</title>
-    <link rel="stylesheet" href="bakery.css">
+    <title>Local Gardening Community</title>
+    <link rel="stylesheet" href="gardening.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Bakery Shop</h1>
+        <h1>Welcome to the Local Gardening Community</h1>
     </header>
     <main>
-        <section id="menu">
-            <h2>Our Menu</h2>
-            <ul>
-                <li>Cakes</li>
-                <li>Pastries</li>
-                <li>Breads</li>
-            </ul>
+        <section id="plant-database">
+            <h2>Plant Database</h2>
+            <label for="filter">Filter by type:</label>
+            <select id="filter" onchange="filterPlants()">
+                <option value="all">All</option>
+                <option value="flowers">Flowers</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+            </select>
+            <div id="plantList"></div>
         </section>
-        <section id="special-offers">
-            <h2>Special Offers</h2>
-            <p>Check back regularly for seasonal offers!</p>
-        </section>
-        <section id="order-form">
-            <h2>Place Your Order</h2>
-            <form id="orderForm">
-                <input type="text" id="itemName" placeholder="Item Name">
-                <input type="number" id="quantity" placeholder="Quantity">
-                <button type="submit">Submit Order</button>
+        <section id="community-forum">
+            <h2>Community Forum</h2>
+            <form id="forumPostForm">
+                <input type="text" id="postTitle" placeholder="Post Title">
+                <textarea id="postContent" placeholder="Share your gardening tips..."></textarea>
+                <button type="submit">Post</button>
             </form>
-            <p id="orderConfirmation"></p>
         </section>
     </main>
     <footer>
-        <p>© 2023 Local Bakery Shop</p>
+        <p>© 2023 Local Gardening Community</p>
     </footer>
-    <script src="bakery.js"></script>
+    <script src="gardening.js"></script>
 </body>
 </html>
